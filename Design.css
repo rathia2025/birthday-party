@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind:wght@400;600&family=Poppins:wght@300;500&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Hind', sans-serif;
+  background: linear-gradient(135deg,#ff4ecd,#7f00ff,#ffae00);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ---------- NAVBAR ---------- */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:15px;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-family:'Poppins';
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ffd6ff;
+  text-shadow:0 0 10px #ff7ad9;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-family:'Yatra One';
+  font-size:3.2rem;
+  text-shadow:0 0 25px #ff9dfc;
+  animation:fadeIn 2s ease;
+}
+
+.hero h2{
+  margin-top:15px;
+  font-size:2rem;
+  color:#ffe6ff;
+  animation:glow 2s infinite alternate;
+}
+
+/* ---------- GIF DECOR ---------- */
+.gif-edge{
+  position:fixed;
+  width:80px;
+  opacity:0.8;
+  animation:float 6s ease-in-out infinite;
+}
+
+/* ---------- MEMORIES SLIDER ---------- */
+.slider{
+  margin-top:120px;
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+  overflow:hidden;
+  position:relative;
+}
+
+.slides{
+  display:flex;
+  transition:0.8s ease-in-out;
+}
+
+.slide{
+  min-width:100%;
+  text-align:center;
+}
+
+.slide img{
+  width:70%;
+  border-radius:20px;
+  box-shadow:0 0 40px rgba(255,0,200,0.7);
+}
+
+.caption{
+  margin-top:15px;
+  font-size:1.3rem;
+  color:#ffe6ff;
+}
+
+/* ---------- MESSAGE ---------- */
+.message-box{
+  margin:140px auto;
+  width:80%;
+  padding:30px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(15px);
+  border-radius:20px;
+  box-shadow:0 0 40px rgba(255,0,200,0.6);
+  font-family:'Hind';
+  font-size:1.3rem;
+  line-height:2rem;
+}
+
+/* ---------- GIFT ---------- */
+.gift-btn{
+  margin-top:180px;
+  padding:20px 40px;
+  font-size:1.5rem;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(45deg,#ff008c,#ffae00);
+  color:#fff;
+  cursor:pointer;
+  animation:pulse 1.5s infinite;
+}
+
+footer{
+  margin-top:80px;
+  text-align:center;
+  font-size:2rem;
+  font-family:'Yatra One';
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 10px #fff;}
+  to{text-shadow:0 0 25px #ff7ad9;}
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-20px);}
+  100%{transform:translateY(0);}
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 10px #fff;}
+  50%{box-shadow:0 0 40px #ff7ad9;}
+  100%{box-shadow:0 0 10px #fff;}
+}
